@@ -43,7 +43,7 @@ export const IssueDetailsPage = ({
 
   useEffect(() => {
     async function fetchComments() {
-      if (issue !== null) {
+      if (issue) {
         const comments = await getComments(issue.comments_url)
         setComments(comments)
       }
@@ -70,7 +70,7 @@ export const IssueDetailsPage = ({
     )
   }
 
-  if (issue) {
+  if (issue === null) {
     content = (
       <div className="issue-detail--loading">
         {backToIssueListButton}
