@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getIssues, IssuesResult } from 'api/githubAPI'
-import { fetchIssuesCount } from '../repoSearch/RepoDetailsSlice'
+import { fetchIssuesCount } from '../repoSearch/repoDetailsSlice'
 import { RootState } from 'app/rootReducer'
 import { IssuesPageHeader } from './IssuesPageHeader'
 import { IssuesList } from './IssuesList'
